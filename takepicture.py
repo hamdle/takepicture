@@ -36,9 +36,17 @@ else:
 name_img = filename()
 path_img = path + name_img
 
+try:
+    log("Starting camera...")
+    camera.start()
+except Exception as ex:
+    log("Error starting camera...")
+    log(ex.message)
+    log("Exiting program.")
+    exit()
+
 log("Taking picture...")
 
-camera.start()
 image = camera.get_image()
 log("Saving picture...")
 pygame.image.save(image, path_img)
@@ -59,7 +67,7 @@ headers={"Content-Type": "application/json"}
 try:
     log("Sending picture...")
     log(url)
-    response = requests.post(url,data,headers)
+    response = requests.post(url, data, headers)
 except Exception as ex:
     log("Error sending picture...")
     log(ex.message)
