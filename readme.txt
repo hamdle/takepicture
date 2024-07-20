@@ -12,10 +12,28 @@ Run
 ---
 $ php run.php
 
+$ php run.php /home/eric/repos/takepicture
+
+$ php run.php /home/eric/repos/takepicture 3
+
+Arg 1: Directory that holds takepicture python script.
+Arg 2: Number of minutes between running python script.
+
 RaspberryPi
 -----------
-This hack
+Setup -- run script on boot. Reboot every 60 minutes to reset camera due to
+Lenovo camera saturation bug.
 
-vim /etc/rc.local
+1.
+$ vim /etc/rc.local
 
-php path/to/run.php & sleep 60m; reboot
+Note: rc.local runs every time raspberrypi boots
+
+2.
+Current:
+$ sh /home/eric/scripts/run.sh & sleep 60m; reboot
+
+Should work, needs tested:
+$ php /home/eric/repos/takepicture/run.php /home/eric/repos/takepicture & sleep & sleep 60m; reboot
+
+Note: place before exit 0
