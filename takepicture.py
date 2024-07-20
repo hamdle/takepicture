@@ -39,9 +39,8 @@ path_img = path + name_img
 try:
     log("Starting camera...")
     camera.start()
-except Exception as ex:
+except Exception:
     log("Error starting camera...")
-    log(ex.message)
     log("Exiting program.")
     exit()
 
