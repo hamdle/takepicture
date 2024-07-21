@@ -43,3 +43,6 @@ TODO
 - fix post data issue
 - replace key with login token authentication
 - make url configurable in .env file
+- make id configurable in .env file
+- write output to tmp file
+- launch terminal and tail output file on startup
