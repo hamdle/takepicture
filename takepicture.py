@@ -11,7 +11,7 @@ url = "http://workout.dev.ddev.site/api/"   # Trailing slash is required to send
 id = "B"
 
 def filename():
-	return "TakePicture v" + str(version) + " - {:%B %d, %Y %I:%M:%S %p}".format(datetime.now()) + "-" + id + ".jpg"
+    return "TakePicture v" + str(version) + " - {:%B %d, %Y %I:%M:%S %p}".format(datetime.now()) + "-" + id + ".jpg"
 
 def log(msg):
     print("{:%B %d, %Y %I:%M:%S %p}".format(datetime.now()) + "-" + id + " :: " + msg)
