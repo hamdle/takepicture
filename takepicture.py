@@ -7,7 +7,7 @@ import base64
 version = 2
 path = "/home/eric/Pictures/TakePicture/"
 key = "SANGEAN6666!"
-url = "http://workout.dev.ddev.site/api"
+url = "http://workout.dev.ddev.site/api/"   # Trailing slash is required to send POST data
 id = "B"
 
 def filename():
