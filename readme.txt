@@ -37,3 +37,9 @@ Should work, needs tested:
 $ php /home/eric/repos/takepicture/run.php /home/eric/repos/takepicture & sleep & sleep 60m; reboot
 
 Note: place before exit 0
+
+TODO
+----
+- fix post data issue
+- replace key with login token authentication
+- make url configurable in .env file
