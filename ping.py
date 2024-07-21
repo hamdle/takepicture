@@ -37,6 +37,7 @@ while True:
         log("Exiting.")
         exit()
 
+    log("Waiting " + str(sec) + " seconds...")
     time.sleep(sec)
 
 log("End.")
